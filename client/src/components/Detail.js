@@ -16,7 +16,7 @@ const Detail = (props) => {
                 setProduct(res.data);
             })
             .catch( err => console.log(err) );
-    }, []);
+    }, [id]);
 
     const deleteProduct = (personId) => {
         
