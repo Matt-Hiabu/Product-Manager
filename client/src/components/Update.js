@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 
 const Update = (props) => {
-    const { id } = useParams(); //this process is identical to the one we used with our Details.js component
+    const { id } = useParams(); 
     const [title, setTitle] = useState(""); 
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
@@ -22,9 +22,9 @@ const Update = (props) => {
     const updateProduct = (e) => {
         e.preventDefault();
         axios.put('http://localhost:8000/api/product/' + id, {
-            title,    // this is shortcut syntax for firstName: firstName,
-            price,      // this is shortcut syntax for description: description
-            description,      // this is shortcut syntax for description: description
+            title,    
+            price,      
+            description, 
         })
             .then(res => {
                 console.log(res);
